@@ -8,7 +8,10 @@ export default makeStyles((theme) => ({
     },
   },
   paper: {
+    width: '100%',
+    maxWidth: '500px',
     padding: theme.spacing(2),
+    position: 'relative'
   },
   form: {
     display: 'flex',
@@ -16,10 +19,26 @@ export default makeStyles((theme) => ({
     justifyContent: 'center',
   },
   fileInput: {
-    width: '97%',
-    margin: '10px 0',
+    width: '100%',
+    margin: '10px 8px',
   },
   buttonSubmit: {
     marginBottom: 10,
   },
+  close: {
+    width: '30px',
+    height: '30px',
+    background: 'transparent',
+    border: 'none',
+    padding: '0',
+    cursor: 'pointer',
+    position: 'absolute',
+    top: '10px',
+    right: '10px'
+  },
+  svg: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain'
+  }
 }));

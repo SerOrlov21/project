@@ -7,8 +7,10 @@ import ChipInput from 'material-ui-chip-input';
 import { getPostsBySearch } from '../../actions/posts';
 import Posts from '../Posts/Posts';
 import Form from '../Form/Form';
+import Popup from '../Popup/Popup';
 import Pagination from '../Pagination';
 import useStyles from './styles';
+import AddButton from '../AddButton/AddButton';
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -24,6 +26,7 @@ const Home = () => {
 
   const [search, setSearch] = useState('');
   const [tags, setTags] = useState([]);
+  const [activePopup, setActivePopup] = useState(false);
   const history = useHistory();
 
   const searchPost = () => {
@@ -65,7 +68,7 @@ const Home = () => {
               />
               <Button onClick={searchPost} className={classes.searchButton} variant="contained" color="primary">Search</Button>
             </AppBar>
-            <Form currentId={currentId} setCurrentId={setCurrentId} />
+            <Popup currentId={currentId} setCurrentId={setCurrentId} active={activePopup} closeForm={setActivePopup}/>
             {(!searchQuery && !tags.length) && (
               <Paper className={classes.pagination} elevation={6}>
                 <Pagination page={page} />
@@ -73,6 +76,7 @@ const Home = () => {
             )}
           </Grid>
         </Grid>
+        <AddButton openForm={setActivePopup} />
       </Container>
     </Grow>
   );
