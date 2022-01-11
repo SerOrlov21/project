@@ -36,6 +36,17 @@ export default makeStyles((theme) => ({
     top: '10px',
     right: '10px'
   },
+  closeAlt: {
+    width: '30px',
+    height: '30px',
+    background: 'transparent',
+    border: 'none',
+    padding: '0',
+    cursor: 'pointer',
+    position: 'absolute',
+    top: '-30px',
+    right: '-30px'
+  },
   svg: {
     width: '100%',
     height: '100%',

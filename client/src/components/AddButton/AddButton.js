@@ -7,7 +7,6 @@ import useStyles from './styles';
 const AddButton = ({ openForm }) => {
   const classes = useStyles();
 
-
   return (
     <button onClick={() => openForm(true)} className={classes.button}>
       <svg className={classes.svg} xmlns="http://www.w3.org/2000/svg" viewBox="3 3 16 16">

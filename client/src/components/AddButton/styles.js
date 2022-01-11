@@ -12,7 +12,7 @@ export default makeStyles((theme) => ({
     left: '15px',
     cursor: 'pointer',
     '&:hover svg': {
-      fill: 'rgba(63, 81, 181, 0.9)'
+      fill: 'rgba(149, 101, 65, 0.9)'
     }
   },
 
@@ -20,7 +20,7 @@ export default makeStyles((theme) => ({
     width: '100%',
     height: '100%',
     objectFit: 'contain',
-    fill: 'rgba(63, 81, 181, 1)',
+    fill: 'rgba(149, 101, 65, 1)',
     transition: 'all 0.3s ease-in-out'
   }
 }));

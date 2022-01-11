@@ -44,6 +44,16 @@ const Form = ({ currentId, setCurrentId, closeForm }) => {
         <Typography variant="h6" align="center">
           Please Sign In to create your own memories and like other's memories.
         </Typography>
+        <button className={classes.closeAlt} onClick={() => closeForm(false)}>
+          <svg className={classes.svg} id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512">
+            <g>
+              <path d="M256,0C114.6,0,0,114.6,0,256c0,141.4,114.6,256,256,256c141.4,0,256-114.6,256-256C512,114.6,397.4,0,256,0z M350.5,353.3
+                l-37.7-0.2L256,285.4L199.3,353l-37.8,0.2c-2.5,0-4.6-2-4.6-4.6c0-1.1,0.4-2.1,1.1-3l74.3-88.6L158,168.6c-0.7-0.8-1.1-1.9-1.1-3
+                c0-2.5,2.1-4.6,4.6-4.6l37.8,0.2l56.7,67.7l56.7-67.7l37.7-0.2c2.5,0,4.6,2,4.6,4.6c0,1.1-0.4,2.1-1.1,3l-74.2,88.5l74.3,88.6
+                c0.7,0.9,1.1,1.9,1.1,3C355.1,351.2,353,353.3,350.5,353.3z"/>
+            </g>
+          </svg>
+        </button>
       </Paper>
     );
   }
