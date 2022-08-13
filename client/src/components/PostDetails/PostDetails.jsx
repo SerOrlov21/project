@@ -43,6 +43,8 @@ const Post = () => {
     <Paper style={{ padding: '20px', borderRadius: '15px' }} elevation={6}>
       <div className={classes.card}>
         <div className={classes.section}>
+          {/* Typography - вроде компонент, в котором находится текст под определённым тегом.
+            */}
           <Typography variant="h3" component="h2">{post.title}</Typography>
           <Typography gutterBottom variant="h6" color="textSecondary" component="h2">{post.tags.map((tag) => (
             <Link to={`/tags/${tag}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
@@ -61,7 +63,11 @@ const Post = () => {
         </div>
         <div className={classes.imageSection}>
           <img className={classes.media} src={post.selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} alt={post.title} />
+          {/* Divider - вроде как компонент, который просто делает полосу/раздилитель (графически имею в виду)
+            */}
           <Divider style={{ margin: '20px 0' }} />
+          {/* CommentSection - компонент, где расположены комментарии
+            */}
           <CommentSection post={post} />
           <Divider style={{ margin: '20px 0' }} />
         </div>

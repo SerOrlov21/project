@@ -11,7 +11,7 @@ import { useHistory } from 'react-router-dom';
 import { likePost, deletePost } from '../../../actions/posts';
 import useStyles from './styles';
 
-const Post = ({ post, setCurrentId }) => {
+const Post = ({ post, setCurrentId, openForm }) => {
   const user = JSON.parse(localStorage.getItem('profile'));
   const [likes, setLikes] = useState(post?.likes);
   const dispatch = useDispatch();
@@ -69,6 +69,7 @@ const Post = ({ post, setCurrentId }) => {
             onClick={(e) => {
               e.stopPropagation();
               setCurrentId(post._id);
+              openForm(true)
             }}
             style={{ color: 'white' }}
             size="small"

@@ -15,6 +15,7 @@ const Popup = ({ currentId, setCurrentId, active, closeForm }) => {
 
   return (
     <div className={classes.popup}>
+      {/* Form - компонент формы добавления/удаления поста */}
       <Form currentId={currentId} setCurrentId={setCurrentId} closeForm={closeForm} />
     </div>
   );

@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+{/* В этом компоненте идут API заросы на сервер, и каждая функция, опираясь на то, какой запрос приходит, возвращает
+тот или иной ответ (это могут как какие-то данные, так и ошибка) */}
+
 const API = axios.create({ baseURL: 'http://localhost:5001' });
 
 API.interceptors.request.use((req) => {
